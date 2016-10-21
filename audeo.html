@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title></title>
+		<style type="text/css">
+		   @font-face {
+            font-family: "iconfont";
+            src: url('fonts/iconfont.eot?t=1471404582'); /* IE9*/
+            src: url('fonts/iconfont.eot?t=1471404582#iefix') format('embedded-opentype'), /* IE6-IE8 */
+            url('fonts/iconfont.woff?t=1471404582') format('woff'), /* chrome, firefox */
+            url('fonts/iconfont.ttf?t=1471404582') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+            url('fonts/iconfont.svg?t=1471404582#iconfont') format('svg'); /* iOS 4.1- */
+        }
+
+        .icon {
+            font-family:"iconfont";
+            font-size:0.4rem;
+            font-style:normal;
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-stroke-width: 1px;
+            -moz-osx-font-smoothing: grayscale;
+        }
+		   *{padding:0;margin:0;}
+		   html{
+		   	 font-size:11px;
+		   }
+			header{
+				width:100%;
+				position:fixed;
+				top:0;
+			}
+            header p{
+            	width:100%;
+            	height:50px;
+            	background:#3e5656;
+            	color:#fff;
+            	display:flex;
+            	align-items: center;
+            	font-size: 2rem;
+            }
+            ul,ol,li{
+            	list-style: none;
+            }
+            section{
+				width:100%;
+				margin-top:50px;
+				font-size: 2rem;
+			}
+            section ul{
+            	width:100%;
+            	height:109px;
+            	background: #054859;
+            	color:#fff;
+            	border-bottom:solid 1px #c8f2f0;
+            	display:flex;
+            	align-items: center;
+            	justify-content: space-between;
+            }
+            section ul .icon{
+            	font-size: 34px; 
+            }
+            section ul span{
+            	display:inline-block;
+            	height:109px;
+            	float:left;
+            }
+            section ul span .p1{
+            	height:68px;
+            	line-height:68px;
+            }
+            section ul .span1{
+            	width:80px;
+            	
+            	line-height:109px;
+            	text-align:center;
+            }
+            section ul #liId{
+            	width:41px;
+            	height:47px;
+            	margin-right:20px;
+            }
+             footer{
+				width:100%;
+				position:fixed;
+				bottom:0;
+				font-size: 2rem;
+			}
+            footer ol{
+            	width:100%;
+            	height:88px;
+            	background: #02223b;
+            	color:#fff;
+            	display:flex;
+            	align-items: center;
+            	justify-content: space-around;
+            } 
+            footer ol .gs{
+            	text-align: center;
+            }
+             footer ol .gs img{
+             	border-radius: 50%;
+             	width:60px;
+             	height:60px;
+             }
+             footer ol .gs p{
+             	width:120px;
+
+             }
+           footer ol .icon{
+            	font-size:34px;
+            }
+            #jinDu{
+            	width:100%;
+            	height:10px;
+            	position: absolute;
+            	bottom: 88px;
+            	border: solid 1px red;
+            }
+            @media screen and (min-width:735px) {
+            header{
+            	position:fixed;
+				top:0;
+				left:0;
+            	display:flex;
+            	justify-content:center;
+            }
+            header p{
+            	width:735px;
+            }
+            section{
+            	display:-webkit-flex;
+            	justify-content:center;
+				flex-wrap:wrap;
+            }
+            section ul{
+            	width:735px;
+            }
+            footer{
+            	display:flex;
+            	justify-content:center;
+            	flex-wrap: wrap;
+            }
+            footer ol{
+            	width:735px;
+            	
+            	
+            }
+            footer #jinDu{
+            	width:735px;
+            	
+            	
+            }
+
+        }
+
+		</style>
+		<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+		<script type="text/javascript">
+		$(function(){
+			var list = [
+                    {
+                        id: "1",
+                        name: "一不小心",
+                        singer: "颜小贱",
+                        src: "music/care.mp3",
+                        imgSrc:"9.jpg"
+                    },
+                    {
+                        id: "2",
+                        name: "趁早",
+                        singer: "张宇",
+                        src: "music/chenzao.mp3",
+                        imgSrc:"10.jpg"
+                    },
+                    {
+                        id: "3",
+                        name: "电台情歌",
+                        singer: "莫文蔚",
+                        src: "music/diantai.mp3",
+                        imgSrc:"11.jpg"
+                    },
+                    {
+                        id: "4",
+                        name: "该死的懦弱",
+                        singer: "胜屿",
+                        src: "music/gaisi.mp3",
+                        imgSrc:"11.jpg"
+                    },
+                    {
+                        id: "5",
+                        name: "医生",
+                        singer: "许嵩",
+                        src: "music/hours.mp3",
+                        imgSrc:"12.jpg"
+                    },
+                    {
+                        id: "6",
+                        name: "好可惜",
+                        singer: "庄心妍",
+                        src: "music/kexi.mp3",
+                        imgSrc:"13.jpg"
+                    },
+                    {
+                        id: "7",
+                        name: "离开以后",
+                        singer: "丁浩然",
+                        src: "music/live.mp3",
+						imgSrc:"12.jpg"
+                    },
+                    {
+                        id: "8",
+                        name: "那个男人",
+                        singer: "杨宗纬",
+                        src: "music/man.mp3",
+						imgSrc:"12.jpg"
+                    },
+                    {
+                        id: "9",
+                        name: "全球变冷",
+                        singer: "许嵩",
+                        src: "music/theworld.mp3",
+						imgSrc:"12.jpg"
+                    },
+                    {
+                        id: "10",
+                        name: "说谎",
+                        singer: "林宥嘉",
+                        src: "music/shuohuang.mp3",
+						imgSrc:"12.jpg"
+                    },
+                    {
+                        id: "11",
+                        name: "月半小夜曲",
+                        singer: "李克勤",
+                        src: "music/yequ.mp3",
+						imgSrc:"12.jpg"
+                    }]
+			for(var i=0;i<list.length;i++){
+			$("#sec").append("<ul class='cc'><li><span class='span1'>"+list[i].id+"</span><span><p class='p1'>"+list[i].name+"</p><p>"+list[i].singer+"</p></span></li><li id='liId'><i class='icon' >&#xe607;</i></li></ul>");		
+			}
+			$(".cc").dblclick(function(){
+				var i=$(this).index();
+				$(".gs p").html(list[i].name);
+				$(".gs img").attr("src",list[i].imgSrc);
+				$(".cc").css("backgroundColor","#054859");
+				$(this).css("backgroundColor","#02223b");
+				   $("#audId").attr("src",list[i].src);
+				   $("#audId")[0].play();
+				   $("#play .icon").eq(1).css("display","block");
+					$("#play .icon").eq(0).css("display","none");
+			});
+			var t;
+			$("#play").click(function(){
+				if($("#play .icon").eq(1).css("display")!="none"){
+					$("#play .icon").eq(1).css("display","none");
+					$("#play .icon").eq(0).css("display","block");
+					$("#audId")[0].pause();
+				}else{
+					$("#play .icon").eq(1).css("display","block");
+					$("#play .icon").eq(0).css("display","none");
+					$("#audId")[0].play();
+					t=parseInt($("#audId")[0].currentTime);
+					alert(t);
+				}
+			});
+		});
+      
+		</script>
+	</head>
+	<body>
+     <header>
+     	<p>我的收藏</p>
+     </header>
+     <section id="sec">
+     </section>
+     <footer>
+     	<ol>
+     		<li class="gs"><img src="thumb.jpg"><p>怒放的生命</p></li>
+     		<li><i class="icon" >&#xe601;</i></li>
+     		<li  id="play"><i class="icon">&#xe600;</i><i class="icon" style="display:none;">&#xe606;</i></li>
+     		<li><i class="icon" >&#xe602;</i></li>
+     		<li><i class="icon" >&#xe605;</i></li>
+     	</ol>
+		<audio id='audId' src='music/dream.mp3'></audio>
+		<div id="jinDu"><p></p></div>
+     </footer>
+     </body>
+</html>
